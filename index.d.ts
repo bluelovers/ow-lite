@@ -15,12 +15,12 @@ declare const typePredicates: {
     object: typeof object;
     string: typeof string;
 };
-declare type typePredicates = typeof typePredicates;
-declare type IOWLitePredicates<T = typePredicates> = {
+declare type ITypePredicates = typeof typePredicates;
+export declare type IOWLitePredicates<T = ITypePredicates> = {
     [p in keyof T]: Predicates<T[p]>;
 };
-declare type IOWLite = {
-    (value: any, predicates: IOWLitePredicates<typePredicates> | unknown, label?: string): void;
+export declare type IOWLite = {
+    (value: any, predicates: IOWLitePredicates<ITypePredicates> | unknown, label?: string): void;
 } & IOWLitePredicates;
 declare const _ow: IOWLite;
 export default _ow;

@@ -22,14 +22,14 @@ const typePredicates = {
 	string,
 };
 
-type typePredicates = typeof typePredicates
+type ITypePredicates = typeof typePredicates
 
-type IOWLitePredicates<T = typePredicates> = {
+export type IOWLitePredicates<T = ITypePredicates> = {
 	[p in keyof T]: Predicates<T[p]>
 }
 
-type IOWLite = {
-	(value, predicates: IOWLitePredicates<typePredicates> | unknown, label?: string): void;
+export type IOWLite = {
+	(value, predicates: IOWLitePredicates<ITypePredicates> | unknown, label?: string): void;
 } & IOWLitePredicates
 
 const createOw = ({
