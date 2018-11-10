@@ -1,6 +1,6 @@
 {
   "name": "ow-lite-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight replacement for the ow validation library meant for browser usage.",
   "keywords": [
     "assert",
