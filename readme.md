@@ -2,13 +2,15 @@
 
 > Lightweight replacement for the [ow](https://github.com/sindresorhus/ow) validation library meant for browser usage.
 
-[![NPM](https://img.shields.io/npm/v/ow-lite.svg)](https://www.npmjs.com/package/ow-lite) [![Build Status](https://travis-ci.com/transitive-bullshit/ow-lite.svg?branch=master)](https://travis-ci.com/transitive-bullshit/ow-lite) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 ## Install
 
 ```bash
-npm install --save ow-lite
+npm install ow-lite-ts
 ```
+
+> fork from [ow-lite](https://github.com/transitive-bullshit/ow-lite)
+
+    try make support for typescript, but ... feel sad ... can't make it fully support
 
 ## Why
 
