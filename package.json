@@ -1,6 +1,6 @@
 {
   "name": "ow-lite-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lightweight replacement for the ow validation library meant for browser usage.",
   "keywords": [
     "assert",
@@ -37,7 +37,7 @@
   },
   "license": "MIT",
   "author": "Travis Fischer <travis@automagical.ai>",
-  "main": "index.ts",
+  "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
