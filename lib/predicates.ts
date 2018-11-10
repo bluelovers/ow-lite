@@ -10,14 +10,17 @@ export type DataPredicates = {
 		[k: string]: Function
 	}
 }
+
+export type SubPredicatesFunc<T extends DataPredicates> = {
+	[p in keyof T[typeof func]]: (...argv) => SubPredicatesFunc<T>;
+} & {
+	[p in keyof T[typeof func]]: (...argv) => SubPredicatesFunc<T>;
+}
+
 export type SubPredicates<T extends DataPredicates> = {
-	[p in keyof T]: {
-		[p in keyof T[typeof func]]: T[typeof func][p];
-	};
+	[p in keyof T]: SubPredicates<T>;
 } & {
-	[p2 in keyof T]: SubPredicates<T>;
-} & {
-	[p in keyof T[typeof func]]: T[typeof func][p];
+	[p in keyof T[typeof func]]: (...argv) => SubPredicatesFunc<T>;
 }
 
 export type Predicates<T extends any> = SubPredicates<T["predicates"]>
